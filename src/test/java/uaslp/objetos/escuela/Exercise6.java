@@ -25,4 +25,34 @@ public class Exercise6 {
         assertThat(Dependencia2.class).isInterface();
         assertThat(Dependencia3.class).isInterface();
     }
+
+    @Test
+    public void validarDependencia1(){
+        Dependencia1 dependencia1 = new Dependencia();
+        Dependencia2 dependencia2 = new Dependencia();
+        Dependencia3 dependencia3 = new Dependencia();
+        AlgoritmoX algoritmoX = new AlgoritmoX(dependencia1, dependencia2, dependencia3);
+
+        algoritmoX.algoritmoACubrir(10, 10, "validarDependencia1");
+    }
+
+    @Test
+    public void validarDependencia2(){
+        Dependencia1 dependencia1 = new Dependencia();
+        Dependencia2 dependencia2 = new Dependencia();
+        Dependencia3 dependencia3 = new Dependencia();
+        AlgoritmoX algoritmoX = new AlgoritmoX(dependencia1, dependencia2, dependencia3);
+
+        algoritmoX.algoritmoACubrir(5, 10, "validarDependencia2");
+    }
+
+    @Test
+    public void validarDependencia3(){
+        Dependencia1 dependencia1 = new Dependencia();
+        Dependencia2 dependencia2 = new Dependencia();
+        Dependencia3 dependencia3 = new Dependencia();
+        AlgoritmoX algoritmoX = new AlgoritmoX(dependencia1, dependencia2, dependencia3);
+
+        algoritmoX.algoritmoACubrir(10, 5, "validarDependencia3");
+    }
 }
